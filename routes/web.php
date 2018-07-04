@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('layouts.main');
 });
+
+Route::get('/dash', function () {
+    return view('layouts.admin');
+});
+
+Route::resource('/admin/category','CategoriesController');
+
+Route::resource('/admin/category/electronics','CategoryElectronicsController');
