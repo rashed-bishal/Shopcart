@@ -21,4 +21,4 @@ Route::get('/dash', function () {
 
 Route::resource('/admin/category','CategoriesController');
 
-Route::resource('/admin/category/electronics','CategoryElectronicsController');
+Route::resource('/admin/electronics','CategoryElectronicsController');

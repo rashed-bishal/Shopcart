@@ -18,7 +18,7 @@
             <a class="dropdown-item" href="{{route('category.create')}}">Create</a>
             <a class="dropdown-item" href="{{route('category.index')}}">Show Categories</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Create Category Table</a>
+            <a class="dropdown-item" href="{{route('electronics.index')}}">Create Category Table</a>
         </div>
     </li>
     <li class="nav-item">

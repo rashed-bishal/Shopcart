@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Schema;
 
 class CategoryElectronicsController extends Controller
 {
@@ -13,7 +16,18 @@ class CategoryElectronicsController extends Controller
      */
     public function index()
     {
-        //
+        $exitCode = Artisan::call('make:model',['name'=>'Computer','-m'=>true]);
+
+        $code = Artisan::call('migrate');
+        Schema::table('computers',function (Blueprint $table){
+
+            $table->string('name');
+
+        });
+
+        $codes = Artisan::call('migrate');
+
+        return "Job Completed";
     }
 
     /**
@@ -45,7 +59,7 @@ class CategoryElectronicsController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
